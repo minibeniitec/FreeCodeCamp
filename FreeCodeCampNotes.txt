@@ -1,0 +1,100 @@
+FreeCodeCamp Notes
+
+by Benjamin A Garza III
+
+This document is a note sheet for documenting my notes as I complete my freecodecamp courses.
+
+Responsive Web Design
+    Basic HTML/HMTL5
+        Introduction to Basic HTML and HMTL5
+            HTML = HyperText Markup Language
+            Element = components with opening and closing tags surrounding content
+                Different elements surroung different content (ex: paragraph <p></p>)
+            The language was original for static documents using the browser as the navigator.
+            W3 updates HTML specification so weppages remain reliable on all browsers.
+        Say Hello to HTML Elements
+            Elements have opening and closing tags (usually)
+            <h></h> (difference is the /)
+            Solution:
+                <h>Hello World</h>
+        Headline with the h2 Element   
+            Add h2 element saying catphotoapp
+            h1-h6 different heading levels
+            Solution:
+                <h1>Hello World</h1>
+                <h2>CatPhotoApp</h2>
+        Inform with the Paragraph Element
+            p - prefered for paragraph text
+            Add p "Hello Paragraph"
+            Solution:
+                <h1>Hello World</h1>
+                <h2>CatPhotoApp</h2>
+                <p>Hello Paragraph</p>
+        Fill in the Blank with Placeholder Text
+            Lorem Ipsum Text is the programmers best filler friend
+            Solution:
+                <h1>Hello World</h1>
+                <h2>CatPhotoApp</h2>
+                <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        Uncomment HTML
+            Comments denoted by <!-- -->
+            Solution was to uncomment stuff
+        Comment Out HTML
+        Delete HTML Elements
+            Literally Deleting (for "vertical space")
+        Introduction to HTML5 Elements
+            main, header, footer, nav, video, article, section
+            tags provide descriptive structure to your HTML
+            ** Tags help with SEO (Search Engin Optimization) & Accessibility
+            Objective: add 2nd p element and surround both with main
+            Solution:
+                <h2>CatPhotoApp</h2>
+                <main>
+                <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+                </main>
+        Add Images to Your Website
+            img - tag
+            alt - descriptive text alternative
+            src - picture source
+            Objective: add an img
+            Solution:
+                <h2>CatPhotoApp</h2>
+                <main>
+                <img src="https://bit.ly/fcc-relaxing-cat" alt="upside down cat">
+
+                <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+                <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+                </main>
+        Link to External Pages with Anchor Elements
+            a tag is for links
+            use href to specify link
+            Solution:
+                <a href="https://freecatphotos.org">cat photos</a>
+        Link to Internal Sections of Page with Anchor Elements
+            Solution: add an id then make the href="#id"
+        Nest an Anchor Element within a Paragraph
+            
+
+Comments:
+    <!-- -->
+
+HTML Elements:
+    h1 - headers
+    h2 - h6 - subheaders
+    p - paragraph
+    img* - image
+        src="file/link"
+    a - link (internal and external)
+        href="website"
+        target="_blank" (new tab)
+    main - marks the main content of a page
+    header - 
+    footer
+    nav
+    video
+    artice
+    section
+
+Notes:
+* self closing tag
