@@ -109,13 +109,83 @@ Responsive Web Design
         Check Radio Buttons and Checkboxes by Default
             <input ... checked>
         Nest Many Elements within a Single div Element
-            
+            <div>...</div>
+        Declare the Doctype of an HTML document
+            Solution: 
+                <!DOCTYPE html>
+                <html>
+                    <h1>What's up?</h1>
+                </html>
+        Define the Head and Body of an HTML Document
+            <head> This should be the markup metadata information </head>
+            <body> The conten </body>
+    Basic CSS
+        Change the Color of Text
+            style attributes can be used to change the color of an element
+                style="color: red;"
+        Use CSS Selectors to Style Elements
+            CSS Selector:
+                <head>
+                    <style>
+                        h2 {
+                            color: blue;
+                        }
+                    </style>
+                </head>
+        Use a CSS Class to Style an Element
+            <style>
+            .red-text {
+                color: red;
+            }
+            </style>
+            <h2 class="red-text">CatPhotoApp</h2>
+        Style Multiple Elements with a CSS Class
+            classes can be applied to multiple elements and items
+        Change the Font Size of an Element
+            use style="font-size: 30px;"
+        Set the Font Family of an Element
+            font-family: monospace;
+        Import a Google Font
+            <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        Specify How Fonts Should Degrade
+            There are several defaul fonts examples include:
+                monospace, serif, sans-serif
+            font-family: main-font, degraded-font
+        Size Your Images
+            width: 50px;
+        Add Borders Around Your Elements
+            borders have properties for example: 
+            style -> border-style;
+            color -> border-color;
+            width -> border-width;
+        Add Rounded Corners with border-radius
+            border-radius: 10px;
+        Make Circular Images with a border-radius
+            border-radius: 50%;
+        Give a Background Color to a div Element
+            background-color: green;
+        Set the id of an Element
+            id="cat-photo-form"
+        Use an id Attribute to Style an Element
+            #id_of_element {
+                background-color: green;
+            }
+        Adjusting the Padding of an Element
+            padding: 20px;
+            border: 
+            margin:
+        Adjust the Margin of an Element
+            margin: ontrols the amount of space between an element's border and surrounding elements
+        Add a Negative Margin to an Element
+            element grows larger when Negative
+        
 
-Comments:
-    <!-- -->
+
+Comments:   
 
 HTML Elements:
     <!-- -->
+    <!DOCTYPE [type]> - declares version of html and more
     <h1> - headers
     <h2> - h6 - subheaders
     <p> - paragraph
@@ -129,8 +199,7 @@ HTML Elements:
     <footer>
     <nav>
     <video>
-    <artice>
-    <section>
+    <artice>    <section>
     Lists
         <ul> - unordered list (bulleted by default)
         <ol> - ordered list (numbered by default)
@@ -146,6 +215,50 @@ HTML Elements:
     <button> - defines a button
         type 
             submit - usually within a form, calls form action
+    <div> - division (general purpose)
+    <head> Document Metadata
+        This should be the markup information </head>
+        Metadata Elements:
+            <link> - defines a relationship between an html document and an external resource
+                rel - attribute - defines relationship
+                href - attribute - link
+                type - attribute - type of resource
+            meta
+            title
+            style
+    <body> The conten </body>
+
+Attributes:
+    id - unique id for an element
+
+
+CSS Elements:
+    style
+        color
+            basic colors (blue, red, yellow, ...) 
+        font-size
+            px
+        font-family: family_name, generic_name;
+            generic is optional in case you are using an unsupported or unavailable font as the main 
+        width: 50px;
+        border-color: red;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 10px | 10%;
+        background-color: green;
+        padding - controls the amount of space between the element's content and its border
+            px
+        border - 
+            px
+        margin - ontrols the amount of space between an element's border and surrounding elements
+            px
+
+    selectors
+        element-tag { [selector definitions] }
+    class
+        .class-name { [selector definitions] }
+            <element class="class-name">..
+
 
 Notes:
 * self closing tag
