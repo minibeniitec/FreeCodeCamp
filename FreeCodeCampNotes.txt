@@ -43,7 +43,7 @@ Responsive Web Design
         Delete HTML Elements
             Literally Deleting (for "vertical space")
         Introduction to HTML5 Elements
-            main, header, footer, nav, video, article, section
+            main, header, foot
             tags provide descriptive structure to your HTML
             ** Tags help with SEO (Search Engin Optimization) & Accessibility
             Objective: add 2nd p element and surround both with main
@@ -74,27 +74,78 @@ Responsive Web Design
         Link to Internal Sections of Page with Anchor Elements
             Solution: add an id then make the href="#id"
         Nest an Anchor Element within a Paragraph
+            <a> = anchor element
+            target="_blank" -opens a new tab
+        Make Dead Links using the Hash Symbol
+            href="#" creates a dead link
+        Turn an Image into a Link
+            Nest the <img> in an <a>
+        Create a Bulleted Unordered List
+            <ul> un-ordered bulleted list
+            <li> list item
+        Create an Ordered List
+            <ol> ordered and numbered list
+        Create a Text Field
+            <input type="text">
+        Add Placeholder Text to a Text Field
+            placeholder attribute of input tag
+        Create a Form Element
+            <form> specifies a group of inputs
+                action attribute sends the form data to the given link
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                Note: Specify protocol
+        Add a Submit Button to a Form
+            <button type="submit">Text here</button>
+        Use HTML5 to Require a Field
+            required attribute on a form input item will not allow users to submit without the item being filled out
+        Create a Set of Radio Buttons
+            <label for="id_of_radio_button">
+                <input type="radio" name="name_of_this_button_group">
+            </label>
+        Create a Set of Checkboxes
+            same as radio buttons, except with type-checkbox
+        Use the Value Attribute with Radio Buttons and Checkboxes
+            <input value="value_of_selection_to_send_to_server">
+        Check Radio Buttons and Checkboxes by Default
+            <input ... checked>
+        Nest Many Elements within a Single div Element
             
 
 Comments:
     <!-- -->
 
 HTML Elements:
-    h1 - headers
-    h2 - h6 - subheaders
-    p - paragraph
-    img* - image
+    <!-- -->
+    <h1> - headers
+    <h2> - h6 - subheaders
+    <p> - paragraph
+    <img>* - image
         src="file/link"
-    a - link (internal and external)
+    <a> - anchor tage for link (internal and external)
         href="website"
         target="_blank" (new tab)
-    main - marks the main content of a page
-    header - 
-    footer
-    nav
-    video
-    artice
-    section
+    <main> - marks the main content of a page
+    <header> - 
+    <footer>
+    <nav>
+    <video>
+    <artice>
+    <section>
+    Lists
+        <ul> - unordered list (bulleted by default)
+        <ol> - ordered list (numbered by default)
+        <li> - list item
+    <input>* - a form of input
+        type - defines the type of input
+            text - textfield
+        placeholder - placeholder text
+        required - just adding this attribute makes the item rquired for the form
+    <form> specifies a group of inputs
+        action attribute sends the form data to the given link
+            Note: assumed that you should always specify protocol and where data will be accepted
+    <button> - defines a button
+        type 
+            submit - usually within a form, calls form action
 
 Notes:
 * self closing tag
