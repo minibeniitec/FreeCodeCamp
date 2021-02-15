@@ -178,10 +178,408 @@ Responsive Web Design
             margin: ontrols the amount of space between an element's border and surrounding elements
         Add a Negative Margin to an Element
             element grows larger when Negative
-        
+        Add Different Padding to Each Side of an Element
+            padding-top: 40px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+        Add Different Margins to Each Side of and Element
+            margin-top: 40px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        Use Clockwise Notation to Specify the Padding of an Element
+            padding: 40px 20px 20px 40px;
+        Use Clockwise Notation to Specify the Margin of an ElementPassed
+            margin: 40px 20px 20px 40px;
+        Use Attribute Selectors to Style Elements
+            [type="checkbox"] {
+                margin: 10px 0px 15px 0px;
+            }
+        Understand Absolute vs Relative Units
+            Absolute = set in stone
+            Relative = relative to the size of an elements font
+            ex: font-size: 1.5em; size is releative to font 
+        Style the HTML Body Element
+            Every page has a body element regarless if explicitly programmed
+            styling the body without the element in code will work
+        Inherit Styles from the Body Element
+            Styles set in body's style are carried down and inherited by other elements
+            Ex: color: green; changes color of headings elements
+        Prioritize One Style Over Another
+            Classes override body elements CSS
+        Override Styles in Subsequent CSS
+            Classes are overridden by order written in style sheet
+            Not by order of classes in element
+        Override Class Decalarations by Styling ID Attributes
+            Selector Precedence: id > class 2 > class 1 > body
+        Override Class Declarations with Inline Styles
+            Regardless of attribute order, inline overrides
+            Selector Precedence: inline style > id > class 2 > class 1 > body
+        Override All Other Styles by using Important
+            Selector Precedence: !important > inline style > id > class 2 > class 1 > body
+            Ex: color: red !important;
+        Use Hex Code for Specific Colors
+            color: #000000;
+            color: #000;
+            RGB is the order
+        Use Hex Code to Mix Colors
+              00 = absence of color
+              FF = Maximum Possible Brightness
+        Use Abbreviated Hex Code
+            Short Hex : #000
+        Use RGB Values to Color Elements
+            rgb(0, 0, 0)
+            values from 0 - 255
+        Use RGB to Mix Colors
+            mix colors the same way
+            0 black to 255 white-ish
+        Use CSS Variables to Change Several Elements at Once
+            --variable-name: value;
+            background-color: var(--variable_name, backup-value)
+        Create a Custom CSS Variable
+            you need the two hyphens
+        Use a Custom CSS Variable
+            var(--variable-name)
+        Attach a Fallback Value to A CSS Variable
+            var(--variable-name, fallback-value)
+        Improve Compatibility with Browser Fallbacks
+            fallbacks are important in case the desired case is available on a browser
+            ex:
+                background: red;
+                background: --red-color; (include both lines where red will be the fallback)
+        Inherit CSS Variables
+            variables are available in the current and descendant selectors
+  
+                :root {
+                    --penguin-belly: pink;
+                }
+                body {
+                    color: var(--penguin-belly);
+                }
+        Change a Variable For a Specific Area
+            you can set a variable for the class your in and any subsequent classes
+            ex:
+                :root { --penguin-belly: pink; }
+                .penguin { --penguin-belly: white; }
+                // from now on penguin belly is white for any classes after
+        Use a Media Query to change a Variable
+            So a media query can be used to resize varibles 
+            depending on a condition
+            @media (max-width: 700px) {
+                :root {
+                    --penguin-size: 200px;
+                    --penguin-skin: black;
+                }
+            }
+            Media is the key word
+            Here the media query resizes penguin skin and size 
+            when the roots width is 700 px or less;
+    Applied Visual Design
+        Create a Visual balance Using the text-align Property
+            text-align: left | center | right | justify;
+        Adjust the Width of an Element Usign the width Property
+            width: 10px;
+        Adjust the Height of an Element Using the Height Property
+            height: 250px;
+        Use the Strong Tage to Make Text Bold
+            font-weight: bold;
+            or 
+            <strong>bolded text</strong>
+        Use the u Tag to Underline Text
+            <u> underline text </u>
+            or 
+            text-decoration: underline;
+        Use the em tag to Italicize Text
+            font-style: italic;
+            or
+            <em> italicized text </em>
+        Use the s Tag to Strikethough Text
+            <s> strikethough text </s>
+            or
+            text-decoration: line-through;
+        Create a Horizontal Line Using the hr Element
+            <hr> - similar to a <br> but ads a horizontal line between elements
+        Adjust the background-color Property of Text
+            often times instead of changing the body background color to help text visibility,
+            you can change the text elements background
+            and you can use rgba to add opacity instead of just a solid background
+            background-color: rgba(45, 45, 45, 0.1);
+        Adjust the Size of a Header VS a Paragraph Tag
+            font-size: 27px;
+            visual affect while maintaining level of importance
+        Add a box-shadow to a Card-like Element
+            box-shadow: offset-x offset-y blur-radius spread-radius color
+            commas separate different shadow boxes allowing for multiple for one element
+            ex: 
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        Decrease the Opacity of an Element
+            opacity: value
+                value: 0 - 1 (transparent - opaque)
+        Use the text-transform Property to Make Text Uppercase
+            text-transform: lowercase | uppercase | capatilize | inherit | none
+        Set the font-size for Multiple Heading Elements
+            You should set the font-size for all the header elements if your gonna change one. 
+            This is only for consistency, so remember there can be exceptions
+        Set the font-weight for Multiple Heading Elements
+            same as font-size above
+        Set the font-size of Paragraph Text
+            can be applied to any element containing text
+        Set the line-height of Paragraphs
+            line-height: 25px;
+            amount of vertical space each line of text gets
+        Adjust the Hover State of an Anchor Tag
+            two things:
+                1. pseudo class defined like shown below allows a class to change based on the given condition
+                2. there are differe kinds of conditions and ways to specify them
+                Solution:
+                    a:hover {
+                        color: blue;
+                    }
+        Change an Elements Relative Position
+            By default, each element is considered a box
+            additionally,
+                block level items start on new lines
+                    headings, paragraphs, divs
+                inline items sit within surrounding content
+                    images, spans
+            default layout called normal flow
+            this can be overridden
+            position: relative;
+            allows the position to be changed relative to where the object would normally be
+            paired with offsets like bottom and top
+            ex:
+                  h2 {
+                        position: relative;
+                        top: 15px;
+                        left: 30px;
+                    }
+        Move a relatively Positioned Element with CSS Offsets
+            top, bottom, left, right
+            top: 15px; means offset the element 15px away from the top (down 15px)
+        Lock an Element to its Parent with Absolute Positioning
+            position: absolute;
+            similar to relative, but rather than relative to its own box
+            its relative to the closest ancestor with a specified position
+            if none are specified, it defaults to the body as the container
+        Lock an Element to the Browser Window with Fixed Positioning
+            For elements like navbars and other fixed items
+            you can lock an elements layout relative to the window of the browser
+            position: fixed;
+        Push Elements Left or right with the float Property
+            float: left;
+            float: right;
+            pair it with width and the percentage
+            removes an element from the normal layout of the document
+        Change the Position of Overlapping Elements with the z-index
+            when elements are positioned to overlap, by default the latter will show on top of the other
+            this can be used by using the z-index
+            assigning indexes will change element order as long as you specify it for both
+            z-index: 1;
+            must be an integer
+            this will be useful for multiple windows
+        Center an Element Horizontally Using the Margin Property
+            margin: auto;
+            for block objects 
+            inline objects can be set to block objects using
+            display: block;
+        Learn About Complementary Colors
+            using hex, complement colors
+            example: 
+                blue: #0000FF
+                yellow: #FFFF00
+        Learn About Tertiary Colors
+            Start with a base color
+            and pair it with two colors that are adjacent to its complement
+            Ex:
+                Cyan: #00FFFF
+                Complement: #FF0000
+                1st Adjacent: #FF7F00
+                2nd Adjacent: #FF007F
+        Adjust the Color of Various Elements to Complementary Colors
+            In practice, you should make the dominant color something easier on the eyes
+            then use the compliment to highlight important elements
+        Adjust the Hue of a Color
+            hsl(hue, saturation, lightness)
+                hue 0 - 360 (colorline from red to blue with green in the middle)
+                saturation: % of gray not in the color
+                lightness: % amount of 100% white or 0% black
+        Adjust the Tone of a Color
+            tint: pure white and pure hue
+            shade: pure hue and some black
+            tone: pure hue and adding gray and black
+        Create a Gradual CSS Linear Gradient
+            linear-gradient(direction, color1, color2, ..., colorN)
+                direction: 35deg
+                colors: any way to specify color
+        Use a CSS Linear Gradient to Create a Striped Element
+            repeating-linear-gradient(
+                deg, 
+                color1 wherecolor1stopspx, 
+                ...,
+                colorN wherecolorNstopspx
+            )
+        Create Texture by Adding a Subtle Pattern as a Background Image
+            background: url("asdfl.asdfa.asdfas/adsf?dsfa_sdfa)
+        Use the CSS Tranform scale Property to Change the Size of an Element
+            tranform: scale(2);
+            doubles the size of all elements this is applied to
+        Use the CSS Transform scale Property to Scale an Element on Hover
+            p:hover {
+                transform: scale(2);
+            }
+        Use the CSS Transform Property skewX to Skey an Element Along the X-Axis
+            transform:skewX(24deg)
+                top is different x coordinates than bottom with same lengh
+                turns the objects box into a parrallelogram with a 24 degree offset
+        Use the CSS Transform Property skewY to Skew an Element Along the Y-Axis
+            transform: skewY(-10deg);
+            left edge is different height than the right
+        Create a Graphic Using CSS
+            Challenge is a guided moon shape using a div element
+            add a radius and make it a circle
+            make the circle transparent
+            add a shadow and make it blue
+            background-color: transparent;
+            border-radius: 50%;
+            box-shadow: 25px 10px 0px 0px blue;
+        Create a More Complex Shape using CSS and HTML
+            create a heart
+                1. use a heart class with pink sqare shape
+                2. add an ::after pseudo element
+                    add radius to make a circle
+                3. add a before pseudo element
+                    same as 2
+                4. transform original class -45 degrees
+        Learn How the CSS @keyframes and Animation Poperties Work
+            @keyframes rule:
+                animation properties control how the animation should behave
+                keyframes rule controls what happens during the animation
+                animation-name: sets the name of the animation later used by keyframes
+                    tells which CSS rules go with which animations
+                animation-duration: length of time
+            Example Animation:
+                #id_of_element {
+                    animation-name: name;
+                    animation-duration: Ns;
+                }
+                @keyframes name {
+                    0% {
+                        // initial setting
+                    }
+                    ...
+                    100% {
+                        // final state
+                    }
+                }
+        Use CSS Animation to Change the Hover State of a Button
+            this isn't the best solution, but the animation is only an example
+            it changes the background color of the button on hover for a second
+            rather use the animation for another purpose and change the color on hover
+            rather than using keyframes
+        Modify Fill mode of an Animation
+            animation-fill-mode: forwards; 
+            keeps the animation at 100% when finished
+        Create Movement Using CSS Animation
+            at each keyframe, you can specify offsets and move the object
+            Note: movements are gradual and linear not erratic and sudden
+        Create Visual direction by Fading an element from Left to Right
+            You can add a fade by changing the opacity in a keyframe
+        Animate Elements Continually Using an Infinite Animation Count
+            animation-iteration-count: N | infinite;
+        Make a CSS Heartbeat using an Infinite Animation Count
+            same thing above
+        Animate Elements at Variable Rates
+            different durations instead of percentages
+        Changing Animation Timing with Keywords
+            animation-timing-funciton: changes acceleration of animation
+                linear
+                ease-in
+                ease-out
+                ease
+        Learn How Bezier Curve Works
+            animation-timing-function: cubic-bezier(x1, y1, x2, y2)
+                0 < x < 1 (inclusive for both)
+                0 < y < 1
+        Use a Bezier Curve to Move a Graphic
+            same as aove using ease-out in bezier
+        Make Motion More Natural Using a Bezier Curve
+            ...
+        Add a Text Alternative to Images for Visually Imparied Accessibility
+            images should have alts explaining the picture
+        Know When Alt Text Should be Left Blank
+            in some cases context explains the picture
+            still include blank alt for search engines
+        Use Heading to Show Heirarchical Relationships of content
+            one and only one h1 element per page
+            just like an essay use structure
+        Jump Straight to the Content Using the main Element
+            each content tag has meaning even if just similar to a div
+            main, header, footer, nav, article, section
+            <body>
+                <header>
+                </header>
+
+                <main>
+                </main>
+
+                <footer>
+                </footer>
+            </body>
+        Wrap Content in the article Element
+            article defines the section of the website for individual
+            articles, blog posts, etc
+        Make Screen Reader Navigation Easier with the header Landmark
+            belongs within the body
+        Make Screen Reader Navigation Easier with the nav Landmark
+            Can be within the header or before
+            should contain all internal links to navigate site
+        Make Screen Reader Navigation Easier with the footer Landmark
+            copyright info, related documents, etc
+        Improve Accessibility of Audio Content with the audio Element
+            <audio>
+                controls attribute populates controls
+                source is specified by src or <source>
+        Improve Chart Accessibility with the figure Element
+            <figure> - for visual data representation
+            <figcaption> - for the caption to the figure (should be within)
+        Improve Form Field Accessibility with the label Element
+            <label for="id_of_form_item">
+            <input id="id_of_form_item">
+        Wrap Radio Buttons in a fieldset Element for Better Accessibility
+            <fieldset>
+                <legend>Explain the field</legend>
+                ... (inputs radio buttons)
+            </fieldset>
+        Add an Accessible Date Picker
+            <input type="date" id="pickdate" name="date">
+            this automatically adds the date Picker
+        Standardize Times with the HTML5 datetime AttributePassed
+            <time datetime="2016-09-15">Thursday, September 15<sup>th</sup></time>
+            labels a time stated on the page and datetime is the attribute that shows the same date in a standardized way
+        Make Elements Only Visible to a Screen Reader by Using Custom CSS
+            position elements for screen readers only, outside of window bounds
+        Improve Readability with High Contrast Text
+            WCAG recommend at least a 4.5 to 1 contrast ratio for normal text
+            1:1 - same color
+            21:1 white and black
+            use online tools to calculate
+        Avoid Colorblindness Issues by Using Sufficient Contrast
+            same as before using hsl
+        Avoid Colorblindness Issues by Carefully Choosing Colors that Convey Information
+            important information should be conveyed using non similar colors
+        Give Links Meaning by Using Descriptive Link Text
+            don't use click here, use the description as the link text
+        Make Links Navigable with HTML Access Keys
+            attribute accesskey=""
+            brings focus to an element 
+            allows users to jump to elemnent using keybaord Keys
+        Use tabindex to Add Keyboard Focus to an ElementPassed
 
 
 Comments:   
+HTML: <!-- -->
+CSS: /* */
 
 HTML Elements:
     <!-- -->
@@ -216,7 +614,7 @@ HTML Elements:
         type 
             submit - usually within a form, calls form action
     <div> - division (general purpose)
-    <head> Document Metadata
+    <head> - Document Metadata
         This should be the markup information </head>
         Metadata Elements:
             <link> - defines a relationship between an html document and an external resource
@@ -226,10 +624,22 @@ HTML Elements:
             meta
             title
             style
-    <body> The conten </body>
+    <body> - The conten </body>
+    <strong> - bolds contained text
+    <u> - underline text
+    <em> - italicized text
+    <s> - strikethough text
+    <br> - line break
+    <hr> - horizontal line between to elements (vertically stacking essentially)
+    <sup> - superscript text
+
 
 Attributes:
     id - unique id for an element
+    style - style for that element
+    type - specifies type of that element
+    name - user given name
+    class - list of any css/javascript classes to be applied to contents
 
 
 CSS Elements:
@@ -247,17 +657,62 @@ CSS Elements:
         border-radius: 10px | 10%;
         background-color: green;
         padding - controls the amount of space between the element's content and its border
-            px
+            padding: 10px 20px 10px 20px;
+            padding-top
+            padding-right
+            paddig-bottom
+            padding-left
         border - 
             px
         margin - ontrols the amount of space between an element's border and surrounding elements
-            px
-
+            margin: 40px;
+            margin-top: 40px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
     selectors
         element-tag { [selector definitions] }
+        [attribute="value"] {
+
+        }
     class
+        #id { }
         .class-name { [selector definitions] }
             <element class="class-name">..
+        @keyframes name_of_animation {
+            0% {}
+            100% {}
+        }
+    properties:
+        text-align: left | center | right | justify
+        width: relative or Absolute
+        height: relative or Absolute
+        font-weight: bold
+        text-decoration: underline | line-though
+        font-style: italic;
+        line-height: px (vertical space each line gets)
+        position: 
+            fixed; relative to browser window
+            relative; relative to itself normally
+            absolute; relative to 
+        display: block
+        transform:
+            scale(x) - make the element x times its given size
+        animation-name: name of animation
+        aniation-duration: how long it takes
+        animation-fill-mode: 
+        animation-iteration-count: N | infinite;
+
+Values:
+    rgb(r, g, b) each is 0-255
+    rgba(r, g, b, a) same as rgb with alpha/level of opacity added
+    hex color #000000 #000
+    px
+    em - relative to text
+    hsl(hue, saturation, lightness)
+                    hue 0 - 360 (colorline from red to blue with green in the middle)
+                    saturation: % of gray not in the color
+                    lightness: % amount of 100% white or 0% black
 
 
 Notes:
