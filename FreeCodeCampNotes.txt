@@ -505,6 +505,7 @@ Responsive Web Design
             same as aove using ease-out in bezier
         Make Motion More Natural Using a Bezier Curve
             ...
+    Applied Accessibility
         Add a Text Alternative to Images for Visually Imparied Accessibility
             images should have alts explaining the picture
         Know When Alt Text Should be Left Blank
@@ -575,7 +576,12 @@ Responsive Web Design
             brings focus to an element 
             allows users to jump to elemnent using keybaord Keys
         Use tabindex to Add Keyboard Focus to an ElementPassed
-
+            tabindex specifies the behavior when tabbing through pages
+            -1 - focusable but not keybaord reachable
+            0 - focusable in keyboard navigation after any positive integers
+            1+ - focusable before 0s
+        Use tabindex to Specify the Order of Keyboard Focus for Several Elements
+            same as above
 
 Comments:   
 HTML: <!-- -->
